@@ -1,5 +1,22 @@
 // 멀티미디어 요소 로딩 전 실행
 $(document).ready(function () {
+      const modal = $(".modal");
+      const modalClose = $(".modal-close");
+      const modalWrap = $(".modal-wrap");
+      modal.click(function () {
+        modal.fadeOut(500);
+        $("body").css("overflow-x", "hidden");
+        $("body").css("overflow-y", "auto");
+      });
+      modalClose.click(function () {
+        modal.fadeOut(500);
+        $("body").css("overflow-x", "hidden");
+        $("body").css("overflow-y", "auto");
+      });
+      modalWrap.click(function (event) {
+        event.stopPropagation();
+      });
+
   // 모바일메뉴
   let mb_div = $('.mb-div')
   // 모바일 버튼 기능
